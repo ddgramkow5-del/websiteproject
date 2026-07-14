@@ -1,2 +1,3 @@
 # websiteproject
-website projection magic
+website, student profile and system
+
