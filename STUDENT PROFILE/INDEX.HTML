@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dewayne Gramkow Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- SIDEBAR -->
+<!-- ========================= -->
+
+<div class="sidebar">
+
+    <div class="profile">
+
+        <!-- Change the src link below to your own image URL -->
+        <img id="sidebarProfile"
+             src="student profile pic.jpg"
+             alt="Profile Picture">
+
+        <h2>Dewayne Gramkow</h2>
+
+        <p>BSIT - 1B</p>
+
+    </div>
+
+    <ul>
+
+        <li class="active" onclick="showSection('dashboard',this)">
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+        </li>
+
+        <li onclick="showSection('profile',this)">
+            <i class="fa-solid fa-user"></i>
+            Profile
+        </li>
+
+        <li onclick="showSection('education',this)">
+            <i class="fa-solid fa-graduation-cap"></i>
+            Education
+        </li>
+
+        <li onclick="showSection('skills',this)">
+            <i class="fa-solid fa-code"></i>
+            Skills
+        </li>
+
+        <li onclick="showSection('projects',this)">
+            <i class="fa-solid fa-laptop-code"></i>
+            Projects
+        </li>
+
+        <li onclick="showSection('certificates',this)">
+            <i class="fa-solid fa-award"></i>
+            Certificates
+        </li>
+
+        <li onclick="showSection('gallery',this)">
+            <i class="fa-solid fa-images"></i>
+            Gallery
+        </li>
+
+        <li onclick="showSection('resume',this)">
+            <i class="fa-solid fa-file-lines"></i>
+            Resume
+        </li>
+
+        <li onclick="showSection('contact',this)">
+            <i class="fa-solid fa-envelope"></i>
+            Contact
+        </li>
+
+    </ul>
+
+    <div class="motto">
+
+        <h3>Personal Motto</h3>
+
+        <p>
+
+            Giving up is one thing,<br>
+            progress is valuable.
+
+        </p>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- CONTENT -->
+<!-- ========================= -->
+
+<div class="content">
+
+<!-- ========================= -->
+<!-- DASHBOARD -->
+<!-- ========================= -->
+
+<section id="dashboard" class="page activePage">
+
+<h1>Welcome, Dewayne 👋</h1>
+
+<p class="subtitle">
+
+Welcome to my personal portfolio dashboard.
+
+</p>
+
+<div class="stats">
+
+<div class="statCard">
+
+<i class="fa-solid fa-code"></i>
+
+<h2>5</h2>
+
+<p>Programming Languages</p>
+
+</div>
+
+<div class="statCard">
+
+<i class="fa-solid fa-gamepad"></i>
+
+<h2>1</h2>
+
+<p>Completed Project</p>
+
+</div>
+
+<div class="statCard">
+
+<i class="fa-solid fa-award"></i>
+
+<h2>2</h2>
+
+<p>Awards</p>
+
+</div>
+
+<div class="statCard">
+
+<i class="fa-solid fa-school"></i>
+
+<h2>4</h2>
+
+<p>Education</p>
+
+</div>
+
+</div>
+
+<div class="dashboardGrid">
+
+<div class="welcomeCard">
+
+<h2>Welcome Message</h2>
+
+<p>
+
+Welcome to my personal information.
+
+I am a first-year BSIT student who always tries to improve, even in subtle ways.
+I enjoy learning new things about programming and game development.
+
+Since you know too much about me...
+
+I'll hunt you...
+
+I'm kidding ✌️
+
+</p>
+
+</div>
+
+<div class="projectPreview">
+
+<img src="images/mathquest.png"
+     alt="Math Quest">
+
+<h2>Math Quest: Discrete Kingdom</h2>
+
+<p>
+
+Educational RPG Game developed using HTML, CSS and JavaScript.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- ========================= -->
+<!-- PROFILE -->
+<!-- ========================= -->
+
+<section id="profile" class="page">
+
+    <h1>About Me</h1>
+
+    <div class="profileCard">
+
+        <!-- Profile Picture -->
+        <div class="profileImage">
+
+            <!-- Change the src link below to your own image URL -->
+            <img id="profilePreview"
+                 src="student profile pic.jpg"
+                 alt="Profile Picture">
+
+        </div>
+
+        <!-- Information -->
+        <div class="profileInfo">
+
+            <h2>Dewayne Dyani A. Gramkow</h2>
+
+            <table>
+
+                <tr>
+                    <td><strong>Age</strong></td>
+                    <td>18</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Address</strong></td>
+                    <td>Purok #4 Cumawas, Bislig City</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Course</strong></td>
+                    <td>BS Information Technology</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Section</strong></td>
+                    <td>BSIT - 1B</td>
+                </tr>
+
+                <tr>
+                    <td><strong>Career Goal</strong></td>
+                    <td>Visual Designer / Game Developer</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <div class="infoCard">
+
+        <h2>Short Biography</h2>
+
+        <p>
+
+            I am a first-year BSIT student with a growing passion for
+            programming and technology. I enjoy creating projects that
+            challenge my creativity and logical thinking.
+
+            One of my major projects is <strong>Math Quest: Discrete Kingdom</strong>,
+            an educational RPG game that combines learning with adventure.
+
+            I believe every project helps me improve my skills and prepares
+            me for future opportunities in software and game development.
+
+        </p>
+
+    </div>
+
+    <div class="infoCard">
+
+        <h2>Career Goals</h2>
+
+        <p>
+
+            My goal is to become a Visual Designer or a Game Developer,
+            creating educational and interactive applications that people
+            can enjoy while learning.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- EDUCATION -->
+<!-- ========================= -->
+
+<section id="education" class="page">
+
+<h1>Educational Background</h1>
+
+<div class="timeline">
+
+<div class="timelineItem">
+
+<h2>Elementary</h2>
+
+<p>Balingan Elementary School</p>
+
+<span>Graduated • 2019</span>
+
+</div>
+
+<div class="timelineItem">
+
+<h2>Secondary</h2>
+
+<p>De La Salle John Bosco College</p>
+
+<span>Graduated • 2023</span>
+
+</div>
+
+<div class="timelineItem">
+
+<h2>Senior High School</h2>
+
+<p>De La Salle John Bosco College</p>
+
+<span>Graduated • 2025</span>
+
+</div>
+
+<div class="timelineItem">
+
+<h2>College</h2>
+
+<p>De La Salle John Bosco College</p>
+
+<span>Currently First-Year BSIT Student</span>
+
+</div>
+
+</div>
+
+</section>
+<!-- ========================= -->
+<!-- SKILLS -->
+<!-- ========================= -->
+
+<section id="skills" class="page">
+
+<h1>Skills</h1>
+
+<div class="skillsGrid">
+
+<div class="skillCard">
+
+<h2><i class="fa-solid fa-laptop-code"></i> Technical Skills</h2>
+
+<ul>
+
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Java Programming</li>
+<li>Responsive Web Design</li>
+<li>Computer Troubleshooting</li>
+<li>Microsoft Office</li>
+<li>Visual Studio Code</li>
+
+</ul>
+
+</div>
+
+<div class="skillCard">
+
+<h2><i class="fa-solid fa-code"></i> Programming Languages</h2>
+
+<ul>
+
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Java</li>
+<li>Python (Basic)</li>
+
+</ul>
+
+</div>
+
+<div class="skillCard">
+
+<h2><i class="fa-solid fa-desktop"></i> Software Applications</h2>
+
+<ul>
+
+<li>Visual Studio Code</li>
+<li>Microsoft Word</li>
+<li>Microsoft Excel</li>
+<li>Microsoft PowerPoint</li>
+<li>Canva</li>
+<li>Google Chrome</li>
+<li>GitHub</li>
+
+</ul>
+
+</div>
+
+<div class="skillCard">
+
+<h2><i class="fa-solid fa-users"></i> Soft Skills</h2>
+
+<ul>
+
+<li>Problem Solving</li>
+<li>Critical Thinking</li>
+<li>Communication</li>
+<li>Teamwork</li>
+<li>Time Management</li>
+<li>Adaptability</li>
+<li>Creativity</li>
+<li>Attention to Detail</li>
+<li>Willingness to Learn</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- PROJECTS -->
+<!-- ========================= -->
+
+<section id="projects" class="page">
+
+<h1>Featured Project</h1>
+
+<div class="projectContainer">
+
+<div class="projectImage">
+
+<!-- Change the src link below to your own image URL -->
+<img id="projectPreview"
+src="MathQuest.jpeg"
+alt="Project Image">
+
+</div>
+
+<div class="projectDetails">
+
+<h2>Math Quest: Discrete Kingdom</h2>
+
+<span class="completed">
+
+<i class="fa-solid fa-circle-check"></i>
+
+Completed Project
+
+</span>
+
+<h3>Description</h3>
+
+<p>
+
+Math Quest: Discrete Kingdom is an educational role-playing game
+that teaches Discrete Mathematics through exploration, quizzes,
+enemy battles, and interactive gameplay.
+
+The objective is to make learning mathematics more enjoyable while
+giving players an adventure-style gaming experience.
+
+</p>
+
+<h3>Technology Used</h3>
+
+<div class="techList">
+
+<span>HTML</span>
+
+<span>CSS</span>
+
+<span>JavaScript</span>
+
+<span>Visual Studio Code</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ========================= -->
+<!-- CERTIFICATES -->
+<!-- ========================= -->
+
+<section id="certificates" class="page">
+
+<h1>Certificates & Achievements</h1>
+
+<div class="certificateGrid">
+
+<div class="certificateCard">
+
+<i class="fa-solid fa-person-chalkboard"></i>
+
+<h2>Trainings Attended</h2>
+
+<p>NDRRMC Training</p>
+
+</div>
+
+<div class="certificateCard">
+
+<i class="fa-solid fa-users"></i>
+
+<h2>Seminars & Workshops</h2>
+
+<p>None</p>
+
+</div>
+
+<div class="certificateCard">
+
+<i class="fa-solid fa-certificate"></i>
+
+<h2>Certificates Earned</h2>
+
+<p>Loyalty Awardee</p>
+
+</div>
+
+<div class="certificateCard">
+
+<i class="fa-solid fa-medal"></i>
+
+<h2>Academic Awards</h2>
+
+<p>Honorable Mention</p>
+<p>Second Semester</p>
+<p>First Year College</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- GALLERY -->
+<!-- ========================= -->
+
+<section id="gallery" class="page">
+
+<h1>Gallery</h1>
+
+<p class="subtitle">
+
+A few of my personal, school, and community photos.
+
+</p>
+
+<div class="galleryGrid">
+
+<!-- Gallery 1 -->
+
+<div class="uploadBox">
+
+<!-- Change the src link below to your own image URL -->
+<img id="gallery1"
+src="gallery1.jpg"
+alt="Personal Photo">
+
+<p>Personal Photo</p>
+
+</div>
+
+<!-- Gallery 2 -->
+
+<div class="uploadBox">
+
+<!-- Change the src link below to your own image URL -->
+<img id="gallery2"
+src="gallery2.jpg"
+alt="School Activity">
+
+<p>School Activity</p>
+
+</div>
+
+<!-- Gallery 3 -->
+
+<div class="uploadBox">
+
+<!-- Change the src link below to your own image URL -->
+<img id="gallery3"
+src="https://placehold.co/350x220?text=Community+Activity"
+alt="Community Activity">
+
+<p>Community Activity</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- ========================= -->
+<!-- RESUME -->
+<!-- ========================= -->
+
+<section id="resume" class="page">
+
+<h1>Resume</h1>
+
+<div class="resumeCard">
+
+<div class="resumeLeft">
+
+<!-- Change the src link below to your own image URL -->
+<img id="resumeProfile"
+src="student profile pic.jpg"
+alt="Resume Profile">
+
+<h2>Dewayne Dyani A. Gramkow</h2>
+
+<p>BS Information Technology Student</p>
+
+</div>
+
+<div class="resumeRight">
+
+<h3>Career Objective</h3>
+
+<p>
+
+To obtain an internship or future employment opportunity where I can
+continue improving my technical skills while contributing positively to
+the organization through hard work, creativity, and continuous learning.
+
+</p>
+
+<h3>Resume</h3>
+
+<p>
+
+Click the button below to download my resume.
+
+</p>
+
+<!-- Change the href link below to your own resume file/URL -->
+<a href="Dewayne Resume.pdf"
+   download="Dewayne_Gramkow_Resume.pdf"
+   class="downloadBtn">
+
+    <i class="fa-solid fa-download"></i>
+    Download Resume
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- CONTACT -->
+<!-- ========================= -->
+
+<section id="contact" class="page">
+
+<h1>Contact Information</h1>
+
+<div class="contactGrid">
+
+<div class="contactCard">
+
+<i class="fa-solid fa-envelope"></i>
+
+<h2>Email</h2>
+
+<p>
+
+Ddgramkow5@gmail.com
+
+</p>
+
+</div>
+
+<div class="contactCard">
+
+<i class="fa-solid fa-phone"></i>
+
+<h2>Phone</h2>
+
+<p>
+
+09454932726
+
+</p>
+
+</div>
+
+<div class="contactCard">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<h2>Address</h2>
+
+<p>
+
+Purok #4 Cumawas<br>
+Bislig City
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Dewayne Dyani A. Gramkow
+
+</p>
+
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
