@@ -1,0 +1,654 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0a0f1a;
+    color: #eaeaea;
+}
+
+/* =========================
+   PAGE SYSTEM
+========================= */
+
+.page {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 80px;
+    animation: fadePage 0.5s ease;
+}
+
+@keyframes fadePage {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   HERO (UPGRADED PREMIUM)
+========================= */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(20, 255, 136, 0.15), transparent 40%),
+        radial-gradient(circle at 80% 60%, rgba(0, 200, 83, 0.12), transparent 45%),
+        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)),
+        url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');
+
+    background-size: cover;
+    background-position: center;
+
+    animation: bgMove 12s ease-in-out infinite alternate;
+}
+
+@keyframes bgMove {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.05);
+    }
+}
+
+/* glow effect */
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: rgba(20, 255, 136, 0.12);
+    filter: blur(120px);
+    top: -120px;
+    left: -120px;
+    animation: floatGlow 6s ease-in-out infinite;
+}
+
+@keyframes floatGlow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(40px);
+    }
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 40px;
+
+    background: rgba(10, 15, 26, 0.65);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+    font-size: 34px;
+    font-family: 'Pacifico', cursive;
+    color: #14ff88;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links li {
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links li:hover {
+    color: #14ff88;
+}
+
+/* =========================
+   NAV INFO
+========================= */
+
+.nav-info {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 70%;
+    padding: 20px;
+
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(18px);
+    border-radius: 15px;
+
+    text-align: center;
+    display: none;
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.overlay {
+    position: relative;
+    z-index: 2;
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+/* hero glass card */
+.hero-card {
+    width: 650px;
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(22px);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 25px;
+
+    animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.main-title {
+    font-size: 72px;
+    font-family: 'Pacifico', cursive;
+    color: #14ff88;
+
+    text-shadow:
+        0 0 20px rgba(20, 255, 136, 0.4),
+        0 0 60px rgba(20, 255, 136, 0.2);
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    color: #b0ffcc;
+    margin-top: 10px;
+}
+
+.hero-description {
+    font-size: 14px;
+    color: #cfeee0;
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+/* =========================
+   HERO STATS
+========================= */
+
+.hero-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-stats h3 {
+    color: #14ff88;
+    font-size: 22px;
+}
+
+.hero-stats p {
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* =========================
+   CTA BUTTONS
+========================= */
+
+.hero-cta {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.hero-cta button {
+    padding: 14px 20px;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-cta .primary {
+    background: #14ff88;
+    color: #000;
+}
+
+.hero-cta .secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.hero-cta button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(20, 255, 136, 0.2);
+}
+
+/* =========================
+   SCROLL INDICATOR
+========================= */
+
+.scroll-down {
+    position: absolute;
+    bottom: 25px;
+    font-size: 12px;
+    color: #b0ffcc;
+    opacity: 0.7;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* =========================
+   FORM CONTAINER
+========================= */
+
+.form-container {
+    width: 520px;
+    margin: 60px auto;
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+}
+
+.form-container h2 {
+    text-align: center;
+    font-size: 34px;
+    color: #14ff88;
+    margin-bottom: 20px;
+}
+
+.form-container input,
+.form-container select {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+.get-started,
+.form-container button,
+.job-card button,
+.back-btn,
+.logout-btn,
+.back-jobs-btn {
+
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+
+    background: #14ff88;
+    color: #000;
+    font-weight: bold;
+}
+
+.back-btn,
+.back-jobs-btn {
+    background: #333;
+    color: white;
+}
+
+/* =========================
+   JOBS PAGE
+========================= */
+
+.top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 30px;
+
+    background: rgba(10, 15, 26, 0.7);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+
+#dashboard {
+    margin: 20px auto;
+    width: 92%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+#dashboard h2 {
+    grid-column: 1/-1;
+    color: #14ff88;
+    font-size: 26px;
+}
+
+#dashboard p {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+/* =========================
+   JOB GRID
+========================= */
+
+.jobs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+/* =========================
+   JOB CARD
+========================= */
+
+.job-card {
+    position: relative;
+
+    padding: 20px;
+
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+.job-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(20, 255, 136, 0.15);
+}
+
+.job-card h3 {
+    color: #14ff88;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.job-card p {
+    font-size: 13px;
+    color: #ddd;
+    margin: 6px 0;
+}
+
+/* =========================
+   POPUPS
+========================= */
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.75);
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-box {
+    width: 420px;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(18px);
+    border-radius: 18px;
+
+    text-align: center;
+}
+
+.popup-box h2 {
+    color: #14ff88;
+}
+
+/* =========================
+   SPECIALISTS
+========================= */
+
+.top-specialists-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.specialist-title {
+    font-size: 42px;
+    color: #14ff88;
+    margin-bottom: 30px;
+}
+
+.specialist-box {
+    margin: 15px auto;
+    width: 80%;
+
+    padding: 20px;
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    text-align: center;
+    padding: 50px 20px;
+    background: #05070d;
+}
+
+.footer h2 {
+    color: #14ff88;
+    font-size: 32px;
+}
+
+.footer p {
+    color: #aaa;
+}
+
+/* =========================
+   SOCIAL LOGIN BUTTONS
+========================= */
+
+.social-login {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.google-btn,
+.facebook-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: 100%;
+    padding: 12px;
+
+    border-radius: 12px;
+    border: none;
+
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.google-btn {
+    background: #fff;
+    color: #000;
+}
+
+.facebook-btn {
+    background: #1877f2;
+    color: #fff;
+}
+
+.google-btn img,
+.facebook-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.google-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+}
+
+.facebook-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(24, 119, 242, 0.3);
+}
+
+/* =========================
+   SOCIAL LOGIN LAYOUT FIX
+========================= */
+
+.social-login {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Buttons */
+.google-btn,
+.facebook-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Google */
+.google-btn {
+    background: #ffffff;
+    color: #000;
+}
+
+/* Facebook */
+.facebook-btn {
+    background: #1877f2;
+    color: #fff;
+}
+
+/* Hover */
+.google-btn:hover,
+.facebook-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+/* BACK BUTTON SPACING */
+.login-footer {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+}

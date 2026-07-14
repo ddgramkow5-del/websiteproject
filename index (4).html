@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HustleHub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&family=Pacifico&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- =========================
+     HOME PAGE
+========================= -->
+
+    <div id="homePage" class="page" style="display:block;">
+
+        <div class="hero">
+
+            <!-- NAVBAR -->
+            <nav class="navbar">
+
+                <div class="logo">HustleHub</div>
+
+                <ul class="nav-links">
+
+                    <li onclick="toggleNavInfo('hire')">
+                        Hire Talent <span id="hireArrow">▼</span>
+                    </li>
+
+                    <li onclick="toggleNavInfo('outcomes')">
+                        Get Outcomes <span id="outcomesArrow">▼</span>
+                    </li>
+
+                    <li onclick="toggleNavInfo('findwork')">
+                        Find Work <span id="findworkArrow">▼</span>
+                    </li>
+
+                    <li onclick="toggleNavInfo('why')">
+                        Why HustleHub <span id="whyArrow">▼</span>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!-- NAV INFO -->
+            <div id="navInfo" class="nav-info"></div>
+
+            <!-- =========================
+         HERO CONTENT (UPGRADED)
+    ========================= -->
+
+            <div class="overlay">
+
+                <div class="hero-card">
+
+                    <h1 class="main-title">HustleHub</h1>
+
+                    <p class="hero-description">
+                        HustleHub connects talented individuals with real online opportunities using smart AI
+                        recommendations that match your skills, experience, and goals.
+                    </p>
+
+                    <!-- STATS -->
+                    <div class="hero-stats">
+
+                        <div>
+                            <h3>10K+</h3>
+                            <p>Jobs Posted</p>
+                        </div>
+
+                        <div>
+                            <h3>5K+</h3>
+                            <p>Freelancers</p>
+                        </div>
+
+                        <div>
+                            <h3>98%</h3>
+                            <p>Match Accuracy</p>
+                        </div>
+
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="hero-cta">
+
+                        <button class="primary" onclick="showPage('loginPage')">
+                            Get Started
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="scroll-down">Scroll to explore ↓</div>
+
+            </div>
+
+        </div>
+
+        <!-- TOP SPECIALISTS -->
+        <div class="top-specialists-section">
+
+            <h2 class="specialist-title">Top Specialists</h2>
+
+            <div class="specialist-box">
+                <h3>Lloyd — Freelancer</h3>
+                <p>Skilled freelancer providing digital solutions and online services.</p>
+            </div>
+
+            <div class="specialist-box">
+                <h3>Warren — Virtual Assistant</h3>
+                <p>Provides admin support, scheduling, and customer service remotely.</p>
+            </div>
+
+            <div class="specialist-box">
+                <h3>Dave — Web Developer</h3>
+                <p>Creates responsive and modern websites using web technologies.</p>
+            </div>
+
+            <div class="specialist-box">
+                <h3>Dwayne — Product Manager</h3>
+                <p>Manages product strategy and development workflows.</p>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            <h2>HustleHub</h2>
+            <p>Connecting talent with opportunity worldwide.</p>
+
+            <p class="copyright">
+                © 2026 HustleHub. All Rights Reserved.
+            </p>
+
+        </footer>
+
+    </div>
+
+    <!-- =========================
+     LOGIN PAGE
+========================= -->
+
+
+    <div id="loginPage" class="page">
+
+        <div class="form-container">
+
+            <h2>Login</h2>
+
+            <input type="text" id="username" placeholder="Username">
+            <input type="email" id="email" placeholder="Email (Gmail / Facebook)">
+            <input type="password" id="password" placeholder="Password">
+
+            <button onclick="loginUser()">Login</button>
+
+            <!-- SOCIAL LOGIN -->
+            <div class="social-login">
+
+                <button class="google-btn" onclick="googleLogin()">
+                    Continue with Google
+                </button>
+
+                <button class="facebook-btn" onclick="facebookLogin()">
+                    Continue with Facebook
+                </button>
+
+            </div>
+
+            <!-- BACK BUTTON -->
+            <div class="login-footer">
+                <button class="back-btn" onclick="showPage('homePage')">
+                    ← Back
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+     QUESTION PAGE
+========================= -->
+
+    <div id="questionPage" class="page">
+
+        <div class="form-container">
+
+            <h2>Find Your Job</h2>
+
+            <select id="skill">
+                <option value="">Select Skill</option>
+                <option value="Web Developer">Web Developer</option>
+                <option value="Graphic Designer">Graphic Designer</option>
+                <option value="Content Writer">Content Writer</option>
+                <option value="Virtual Assistant">Virtual Assistant</option>
+            </select>
+
+            <select id="experience">
+                <option value="">Experience Level</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+
+            <select id="workType">
+                <option value="">Preferred Work Setup</option>
+                <option value="Remote">Remote</option>
+                <option value="Hybrid">Hybrid</option>
+                <option value="Onsite">Onsite</option>
+            </select>
+
+            <button onclick="showJobs()">Find Jobs</button>
+
+            <button class="back-btn" onclick="showPage('loginPage')">
+                ← Back
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+     JOBS PAGE
+========================= -->
+
+    <div id="jobsPage" class="page">
+
+        <div class="top-bar">
+
+            <button class="back-jobs-btn" onclick="showPage('questionPage')">
+                ← Back
+            </button>
+
+            <h2>Recommended Jobs</h2>
+
+            <button class="logout-btn" onclick="logoutUser()">
+                Logout
+            </button>
+
+        </div>
+
+        <div id="dashboard"></div>
+
+        <div id="jobsContainer" class="jobs-container"></div>
+
+    </div>
+
+    <!-- =========================
+     APPLY PAGE
+========================= -->
+
+    <div id="applyPage" class="page">
+
+        <div class="form-container">
+
+            <h2>Job Application</h2>
+
+            <input type="text" id="fullName" placeholder="Full Name">
+            <input type="email" id="applicantEmail" placeholder="Email Address">
+            <input type="text" id="phoneNumber" placeholder="Phone Number">
+            <input type="text" id="address" placeholder="Address">
+
+            <label>Upload Resume</label>
+            <input type="file" id="resumeFile">
+
+            <label>Upload Portfolio</label>
+            <input type="file" id="portfolioFile">
+
+            <label>Upload Valid ID</label>
+            <input type="file" id="validIdFile">
+
+            <button onclick="submitApplication()">Submit Application</button>
+
+            <button class="back-btn" onclick="showPage('jobsPage')">
+                ← Back
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+     POPUPS
+========================= -->
+
+    <div id="loadingPopup" class="popup-overlay">
+        <div class="popup-box">
+            <h2>Submitting...</h2>
+            <p>Please wait...</p>
+        </div>
+    </div>
+
+    <div id="successPopup" class="popup-overlay">
+        <div class="popup-box">
+
+            <h2>Application Submitted</h2>
+
+            <p>Hello <strong id="popupName"></strong></p>
+            <p>Job: <strong id="popupJob"></strong></p>
+            <p>Email: <strong id="popupEmail"></strong></p>
+
+            <button onclick="closePopup()">OK</button>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
